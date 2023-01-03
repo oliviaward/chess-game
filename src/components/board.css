@@ -1,0 +1,22 @@
+#board {
+    background-color: pink;
+    display: grid;
+    grid-template-columns: repeat(8, 62.5px);
+    grid-template-rows: repeat(8, 62.5px);
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+}
+
+#board .tile {
+    width: 62.5px;
+    height: 62.5px;
+}
+
+#board .black-tile {
+    background-color: palegreen;
+}
+
+#board .white-tile {
+    background-color: white;
+}
