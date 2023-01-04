@@ -12,6 +12,20 @@ interface Piece {
 
 const pieces: Piece[] = [];
 
+for (let p = 0; p < 2; p++) {
+    const colour = p === 0 ? "black" : "white";
+    const yCord = p === 0 ? 7 : 0;
+
+    pieces.push({ image: `./assets/images/${colour}_rook.png`, xCord: 0, yCord })
+    pieces.push({ image: `./assets/images/${colour}_rook.png`, xCord: 7, yCord })
+    pieces.push({ image: `./assets/images/${colour}_knight.png`, xCord: 1, yCord })
+    pieces.push({ image: `./assets/images/${colour}_knight.png`, xCord: 6, yCord })
+    pieces.push({ image: `./assets/images/${colour}_bishop.png`, xCord: 2, yCord })
+    pieces.push({ image: `./assets/images/${colour}_bishop.png`, xCord: 5, yCord })
+    pieces.push({ image: `./assets/images/${colour}_queen.png`, xCord: 3, yCord })
+    pieces.push({ image: `./assets/images/${colour}_king.png`, xCord: 4, yCord })
+}
+
 for (let i = 0; i < 8; i++) {
     pieces.push({ image: "./assets/images/black_piece.png", xCord: i, yCord: 6 })
 }
@@ -19,24 +33,6 @@ for (let i = 0; i < 8; i++) {
 for (let i = 0; i < 8; i++) {
     pieces.push({ image: "./assets/images/white_piece.png", xCord: i, yCord: 1 })
 }
-
-pieces.push({ image: "./assets/images/black_rook.png", xCord: 0, yCord: 7 })
-pieces.push({ image: "./assets/images/black_rook.png", xCord: 7, yCord: 7 })
-pieces.push({ image: "./assets/images/black_knight.png", xCord: 1, yCord: 7 })
-pieces.push({ image: "./assets/images/black_knight.png", xCord: 6, yCord: 7 })
-pieces.push({ image: "./assets/images/black_bishop.png", xCord: 2, yCord: 7 })
-pieces.push({ image: "./assets/images/black_bishop.png", xCord: 5, yCord: 7 })
-pieces.push({ image: "./assets/images/black_queen.png", xCord: 3, yCord: 7 })
-pieces.push({ image: "./assets/images/black_king.png", xCord: 4, yCord: 7 })
-
-pieces.push({ image: "./assets/images/white_rook.png", xCord: 0, yCord: 0 })
-pieces.push({ image: "./assets/images/white_rook.png", xCord: 7, yCord: 0 })
-pieces.push({ image: "./assets/images/white_knight.png", xCord: 1, yCord: 0 })
-pieces.push({ image: "./assets/images/white_knight.png", xCord: 6, yCord: 0 })
-pieces.push({ image: "./assets/images/white_bishop.png", xCord: 2, yCord: 0 })
-pieces.push({ image: "./assets/images/white_bishop.png", xCord: 5, yCord: 0 })
-pieces.push({ image: "./assets/images/white_queen.png", xCord: 3, yCord: 0 })
-pieces.push({ image: "./assets/images/white_king.png", xCord: 4, yCord: 0 })
 
 export default function Board() {
     let chessBoard = [];
