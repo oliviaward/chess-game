@@ -12,3 +12,19 @@
 .white-tile {
     background-color: white;
 }
+
+.tile .chess-piece {
+    width: 62.5px;
+    height: 62.5px;
+    background-position: center;
+    background-size: 62.5px;
+    background-repeat: no-repeat;
+}
+
+.tile .chess-piece:hover {
+    cursor: grab;
+}
+
+.tile .chess-piece:active {
+    cursor: grabbing;
+}
