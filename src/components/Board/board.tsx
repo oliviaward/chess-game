@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Tile from '../Tile/Tile';
 import './board.css';
 
@@ -38,7 +38,6 @@ for (let i = 0; i < 8; i++) {
 
 export default function Board() {
     const boardRef = useRef<HTMLDivElement>(null);
-
     let movingPiece: HTMLElement | null = null;
 
     function grabThePiece(e: React.MouseEvent) {
@@ -79,17 +78,12 @@ export default function Board() {
             if (yCord < minYCord) {
                 movingPiece.style.top = `${minYCord}px`;
             }
-            else if (yCord > maxYCord) {
-                movingPiece.style.top = `${maxYCord}px`;
-            }
-            else {
-                movingPiece.style.top = `${yCord}px`;
-            }
         }
     }
 
     function placeThePiece(e: React.MouseEvent) {
         if (movingPiece) {
+            pieces[0].xCord = 5;
             movingPiece = null;
         }
     }
